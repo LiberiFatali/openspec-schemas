@@ -28,7 +28,7 @@ Install the superpowers-bridge schema for OpenSpec into this project:
 3. Copy the `superpowers-bridge/` subdirectory to `openspec/schemas/superpowers-bridge/`.
 4. Run `openspec schema validate superpowers-bridge` to verify.
 5. Run `openspec schemas` and confirm `superpowers-bridge` is listed.
-6. If a CLAUDE.md exists at the project root, ask me whether to insert the workflow-routing fragment from `openspec/schemas/superpowers-bridge/templates/adopters/CLAUDE.md.fragment.<locale>.md` (auto-detect locale from existing CLAUDE.md content; default zh-TW for Traditional Chinese, no suffix for English). If I say yes, append the fragment as a new section. If no CLAUDE.md exists, skip.
+6. If a CLAUDE.md exists at the project root, ask me whether to insert the workflow-routing fragment from `openspec/schemas/superpowers-bridge/templates/adopters/CLAUDE.md.fragment.<locale>.md` (auto-detect locale from existing CLAUDE.md content; zh-TW for Traditional Chinese, no-suffix English fragment for all other languages). If I say yes, append the fragment as a new section. If no CLAUDE.md exists, skip.
 7. Clean up the temp directory.
 8. Verify Superpowers plugin is installed by running `claude plugin list`.
    If not listed, run `claude plugin install superpowers@claude-plugins-official`.
@@ -78,7 +78,7 @@ Upgrade the superpowers-bridge schema in this project:
 8. Show me the final state.
 ```
 
-> `<locale>` 預設 `zh-TW`(若你 CLAUDE.md 是繁中)或省略(英文)。Claude 會依你 CLAUDE.md 的既有語言判斷。
+> `<locale>` 為 `zh-TW`(若你 CLAUDE.md 是繁中)，其他語言一律用無後綴英文 fragment。Claude 會依你 CLAUDE.md 的既有語言判斷。
 
 ### 升級方法 2:手動 bash
 
