@@ -28,7 +28,7 @@ Install the superpowers-bridge schema for OpenSpec into this project:
 3. Copy the `superpowers-bridge/` subdirectory to `openspec/schemas/superpowers-bridge/`.
 4. Run `openspec schema validate superpowers-bridge` to verify.
 5. Run `openspec schemas` and confirm `superpowers-bridge` is listed.
-6. If a CLAUDE.md exists at the project root, ask me whether to insert the workflow-routing fragment from `openspec/schemas/superpowers-bridge/templates/adopters/CLAUDE.md.fragment.<locale>.md` (auto-detect locale from existing CLAUDE.md content; default zh-TW for Traditional Chinese, no suffix for English). If I say yes, append the fragment as a new section. If no CLAUDE.md exists, skip.
+6. If a CLAUDE.md exists at the project root, ask me whether to insert the workflow-routing fragment from `openspec/schemas/superpowers-bridge/templates/adopters/CLAUDE.md.fragment.<locale>.md` (auto-detect locale from existing CLAUDE.md content; zh-TW for Traditional Chinese, no-suffix English fragment for all other languages). If I say yes, append the fragment as a new section. If no CLAUDE.md exists, skip.
 7. Clean up the temp directory.
 8. Verify Superpowers plugin is installed by running `claude plugin list`.
    If not listed, run `claude plugin install superpowers@claude-plugins-official`.
@@ -42,7 +42,7 @@ Giải thích các bước:
 3. Sao chép thư mục `superpowers-bridge/` vào `openspec/schemas/superpowers-bridge/`.
 4. Chạy `openspec schema validate superpowers-bridge` để kiểm tra.
 5. Chạy `openspec schemas` và xác nhận `superpowers-bridge` đã được liệt kê.
-6. Nếu có `CLAUDE.md` ở project root, hỏi tôi có muốn chèn **workflow-routing fragment** từ `templates/adopters/CLAUDE.md.fragment.<locale>.md` không (tự động phát hiện locale từ nội dung CLAUDE.md; mặc định zh-TW cho Traditional Chinese, không suffix cho English). Nếu tôi đồng ý, thêm fragment như một section mới. Nếu không có CLAUDE.md thì bỏ qua.
+6. Nếu có `CLAUDE.md` ở project root, hỏi tôi có muốn chèn **workflow-routing fragment** từ `templates/adopters/CLAUDE.md.fragment.<locale>.md` không (tự động phát hiện locale từ nội dung CLAUDE.md; zh-TW cho Traditional Chinese, fragment English không suffix cho mọi ngôn ngữ khác). Nếu tôi đồng ý, thêm fragment như một section mới. Nếu không có CLAUDE.md thì bỏ qua.
 7. Dọn dẹp thư mục temp.
 8. Kiểm tra Superpowers plugin đã được cài chưa bằng `claude plugin list`. Nếu chưa, chạy `claude plugin install superpowers@claude-plugins-official`.
 9. Cho tôi xem kết quả cuối cùng.
@@ -90,7 +90,7 @@ Upgrade the superpowers-bridge schema in this project:
 8. Show me the final state.
 ```
 
-> `<locale>` mặc định là `zh-TW` nếu CLAUDE.md của bạn dùng Traditional Chinese, hoặc không suffix (English). Claude tự động phát hiện từ nội dung CLAUDE.md hiện tại.
+> `<locale>` là `zh-TW` nếu CLAUDE.md của bạn dùng Traditional Chinese, các ngôn ngữ khác dùng fragment English không suffix. Claude tự động phát hiện từ nội dung CLAUDE.md hiện tại.
 
 ### Phương pháp nâng cấp 2: Bash thủ công
 
